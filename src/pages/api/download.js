@@ -3,6 +3,12 @@ import AdmZip from 'adm-zip';
 import { Buffer } from 'buffer';
 
 export default function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+res.setHeader('Access-Control-Allow-Headers', '*');
+
+if (req.method === 'OPTIONS') return res.status(200).end();
+
   const { repo: repoUrl } = req.query;
   if (!repoUrl) return res.status(400).json({ error: 'Missing repo parameter' });
 
