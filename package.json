@@ -9,9 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
-        "adm-zip": "^0.5.16",
+    "adm-zip": "^0.5.16",
     "follow-redirects": "^1.15.11",
     "next": "15.5.3",
+    "node-fetch": "^3.3.2",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
